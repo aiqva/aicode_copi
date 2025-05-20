@@ -11,3 +11,5 @@ dump.sql
 /tmp/
 .env
 config/database.php  # If it contains sensitive credentials
+
+# IDE-specific files
