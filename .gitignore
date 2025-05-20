@@ -12,4 +12,4 @@ dump.sql
 .env
 config/database.php  # If it contains sensitive credentials
 
-# IDE-specific files
+# IDE-specific  files
