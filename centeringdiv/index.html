@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centering a div</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .centered-div {
+            width: 300px;
+            height: 200px;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 200px; /* Center text vertically */
+        }
+        .centered-div p {
+            margin: 0;
+        }
+        .centered-div:hover {
+            background-color: lightcoral;
+        }
+        .centered-div:active {
+            background-color: lightgreen;
+        }
+        .centered-div:focus {
+            outline: 2px solid blue;
+        }
+        /* Responsive design */
+        @media (max-width: 600px) {
+            .centered-div {
+                width: 90%;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="centered-div" tabindex="0">
+        <p>Centered Div</p>
+    </div>  
+    <script>
+        // JavaScript to handle focus and click events
+        const centeredDiv = document.querySelector('.centered-div');
+
+        centeredDiv.addEventListener('click', () => {
+            alert('Div clicked!');
+        });
+
+        centeredDiv.addEventListener('focus', () => {
+            centeredDiv.style.boxShadow = '0 0 10px rgba(0, 0, 255, 0.5)';
+        });
+
+        centeredDiv.addEventListener('blur', () => {
+            centeredDiv.style.boxShadow = 'none';
+        });
+        // Accessibility: Make the div focusable
+        centeredDiv.setAttribute('tabindex', '0');
+    </script>
+</body> 
+</html>
